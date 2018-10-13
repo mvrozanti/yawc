@@ -23,7 +23,9 @@
 git clone --recursive https://github.com/mvrozanti/yawc \
   cd yawc/WebWhatsapp-Wrapper \
   pip3 install --user -r requirements.txt \
-  pip3 install --user .
+  pip3 install --user . \
+  cd .. \
+  !-3
 ```
 
 - Make sure you have geckodriver and Firefox 61 installed:
@@ -55,3 +57,8 @@ optional arguments:
   -t [CONTACT|CHAT], --to [CONTACT|CHAT]
                         apply command only to this CONTACT or CHAT
 ```
+
+## TODO
+
+- Support unicode
+- More flags
