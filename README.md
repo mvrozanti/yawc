@@ -62,3 +62,5 @@ optional arguments:
 
 - Support unicode
 - More flags
+- Support images
+- Use `-` as stdin reference in order to enable piping from shell
