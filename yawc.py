@@ -10,7 +10,6 @@ import sys
 import matplotlib.pyplot as plt
 import time
 import sqlite3
-import code
 import glob
 import os
 import os.path as op
@@ -70,7 +69,8 @@ def main(args):
             if contact_type == 1: 
                 contacts = DRIVER.get_contacts()
                 prompt = ''
-                prompt += '\n'.join([str(i) + ') ' + c.name for i, c in enumerate(contacts) if c.name])
+                code.interact(local=locals())
+                prompt += '\n'.join([str(i) + ') ' + c.name + ': ' + c.id for i, c in enumerate(contacts) if c.name])
                 prompt += '\nSelect contact: '
                 chosen = None
                 while not chosen:
@@ -78,7 +78,7 @@ def main(args):
                     except: pass
                 args.to = contacts[chosen].id
             elif contact_type == 2: pass
-            DRIVER.send_message_to_id(args.to, args.send)
+        DRIVER.send_message_to_id(args.to, args.send)
 
 if __name__ == '__main__': 
     parser = argparse.ArgumentParser()
