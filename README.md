@@ -45,7 +45,8 @@ optional arguments:
   -C, --contacts        show all contacts ever seen by this account
   -m, --my-contacts     show my contacts (added to address book)
   -s MESSAGE, --send MESSAGE
-                        send message (requires --to flag)
+                        send message. If MESSAGE equals '-', read from stdin.
+                        Requires --to flag
   -B MESSAGE, --broadcast MESSAGE
                         send message to all chats
   -b MESSAGE, --broadcast-contacts MESSAGE
@@ -63,6 +64,5 @@ optional arguments:
 ## TODO
 
 - Support unicode
-- More flags
-- Support images
-- Use `-` as stdin reference in order to enable piping from shell
+- Send message --to [exact name of contact instead of just c.id]
+- Send/Download images

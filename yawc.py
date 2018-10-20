@@ -56,11 +56,10 @@ def main(args):
     def log_json(d): 
         global LOG
         print(json.dumps(d, indent=4), file=LOG)
-    code.interact(local=globals())
     if args.chats: log_json({'chats' : [[c.name, c.id] for c in DRIVER.get_all_chats() if c.name]})
     elif args.my_contacts: log_json({'my_contacts': [[c.name, c.id] for c in DRIVER.get_my_contacts()]})
     elif args.contacts: log_json({'all_contacts': [[c.name, c.id] for c in DRIVER.get_contacts()]})
-    elif args.send: DRIVER.send_message_to_id(args.to, args.send)
+    elif args.send: DRIVER.send_message_to_id(args.to, ''.join(sys.stdin.readlines()) if args.send == '-' else args.send)
 
 if __name__ == '__main__': 
     parser = argparse.ArgumentParser(prog='yawc', description='Interface for WebWhatsapp-Wrapper API')
@@ -68,7 +67,7 @@ if __name__ == '__main__':
     actions.add_argument('-c', '--chats',                action='store_true',        help='show chats')
     actions.add_argument('-C', '--contacts',             action='store_true',        help='show all contacts ever seen by this account')
     actions.add_argument('-m', '--my-contacts',          action='store_true',        help='show my contacts (added to address book)')
-    actions.add_argument('-s', '--send',                 metavar='MESSAGE',          help='send message (requires --to flag)')
+    actions.add_argument('-s', '--send',                 metavar='MESSAGE',          help='send message. If MESSAGE equals \'-\', read from stdin. Requires --to flag')
     actions.add_argument('-B', '--broadcast',            metavar='MESSAGE',          help='send message to all chats')
     actions.add_argument('-b', '--broadcast-contacts',   metavar='MESSAGE',          help='send message to all contacts')
     parser.add_argument( '-t', '--to',                   metavar='[CONTACT|CHAT]',   help='apply command to this CONTACT or CHAT', required='-s' in sys.argv or '--send' in sys.argv)
