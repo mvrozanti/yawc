@@ -66,3 +66,5 @@ optional arguments:
 - Support unicode
 - Send message --to [exact name of contact instead of just c.id]
 - Send/Download images
+- Read messages continously in an optionally set format
+- Add user to group
