@@ -64,7 +64,7 @@ def main(args):
 
 if __name__ == '__main__': 
     parser = argparse.ArgumentParser(prog='yawc', description='Interface for WebWhatsapp-Wrapper API')
-    actions = parser.add_mutually_exclusive_group()
+    actions = parser.add_mutually_exclusive_group(required=True)
     actions.add_argument('-c', '--chats',                action='store_true',        help='show chats')
     actions.add_argument('-C', '--contacts',             action='store_true',        help='show all contacts ever seen by this account')
     actions.add_argument('-m', '--my-contacts',          action='store_true',        help='show my contacts (added to address book)')

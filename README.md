@@ -34,7 +34,7 @@ git clone --recursive https://github.com/mvrozanti/yawc \
 ## Usage
 
 ```
-usage: yawc [-h] [-c | -C | -m | -s MESSAGE | -B MESSAGE | -b MESSAGE]
+usage: yawc [-h] (-c | -C | -m | -s MESSAGE | -B MESSAGE | -b MESSAGE)
             [-t [CONTACT|CHAT]] [-v] [-p LOCATION] [-l LOCATION]
 
 Interface for WebWhatsapp-Wrapper API
