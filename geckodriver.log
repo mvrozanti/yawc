@@ -3394,3 +3394,199 @@ IPDL protocol error: Handler returned error code!
 1539726542235	Marionette	INFO	Listening on port 33735
 1539726542275	Marionette	WARN	TLS certificate errors will be ignored for this session
 *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1539726710815	mozrunner::runner	INFO	Running command: "/usr/local/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.HF0rkd4R1uDG"
+1539726711804	Marionette	INFO	Listening on port 43007
+1539726711840	Marionette	WARN	TLS certificate errors will be ignored for this session
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1539726748542	mozrunner::runner	INFO	Running command: "/usr/local/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.qYklLXc7T2EZ"
+1539726749511	Marionette	INFO	Listening on port 46717
+1539726749561	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 23046, Gecko_IOThread] WARNING: pipe error (128): Connection reset by peer: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Parent 23046, Gecko_IOThread] WARNING: pipe error (95): Connection reset by peer: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1539726785634	mozrunner::runner	INFO	Running command: "/usr/local/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.wYqknctZRPcm"
+1539726786627	Marionette	INFO	Listening on port 45271
+1539726786655	Marionette	WARN	TLS certificate errors will be ignored for this session
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1539726803991	mozrunner::runner	INFO	Running command: "/usr/local/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.QrfWjpy5bLYk"
+1539726805049	Marionette	INFO	Listening on port 44709
+1539726805106	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 25924, Gecko_IOThread] WARNING: pipe error (134): Connection reset by peer: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Parent 25924, Gecko_IOThread] WARNING: pipe error (100): Connection reset by peer: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1539726834918	mozrunner::runner	INFO	Running command: "/usr/local/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.VHsnN8ATusjA"
+1539726835906	Marionette	INFO	Listening on port 45007
+1539726835945	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 27753, Gecko_IOThread] WARNING: pipe error (126): Connection reset by peer: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Parent 27753, Gecko_IOThread] WARNING: pipe error (95): Connection reset by peer: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1539727072110	mozrunner::runner	INFO	Running command: "/usr/local/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.O75zZu4cvHYg"
+1539727073074	Marionette	INFO	Listening on port 36745
+1539727073129	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 31589, Gecko_IOThread] WARNING: pipe error (127): Connection reset by peer: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Parent 31589, Gecko_IOThread] WARNING: pipe error (95): Connection reset by peer: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1539994926040	mozrunner::runner	INFO	Running command: "/usr/local/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.LGX3CeTeQLv7"
+1539994927492	Marionette	INFO	Listening on port 45411
+1539994927518	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539994927546	Marionette	DEBUG	[2147483649] Frame script loaded
+1539994927548	Marionette	DEBUG	[2147483649] Frame script registered
+1539994927576	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1539994928397	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1539994928469	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1539994929501	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1014: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1014: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1014: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1014: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1014: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1014: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1014: Error: WebExtension context not found!
+1539994944060	Marionette	INFO	Stopped listening on port 45411
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1014: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1014: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1014: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1014: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1014: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1014: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1014: Error: WebExtension context not found!
+[Parent 11711, Gecko_IOThread] WARNING: pipe error (120): Connection reset by peer: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Parent 11711, Gecko_IOThread] WARNING: pipe error (102): Connection reset by peer: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1539994953495	mozrunner::runner	INFO	Running command: "/usr/local/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.PZ0pkWWNIsyM"
+1539994954697	Marionette	INFO	Listening on port 45187
+1539994954724	Marionette	WARN	TLS certificate errors will be ignored for this session
+1539994954745	Marionette	DEBUG	[2147483649] Frame script loaded
+1539994954747	Marionette	DEBUG	[2147483649] Frame script registered
+1539994954769	Marionette	DEBUG	[2147483649] Received DOM event beforeunload for about:blank
+1539994955611	Marionette	DEBUG	[2147483649] Received DOM event pagehide for about:blank
+1539994955686	Marionette	DEBUG	[2147483649] Received DOM event DOMContentLoaded for https://web.whatsapp.com/
+1539994956733	Marionette	DEBUG	[2147483649] Received DOM event pageshow for https://web.whatsapp.com/
+1539995674405	mozrunner::runner	INFO	Running command: "/usr/local/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.D297RGMat07w"
+ERROR - ContextualIdentityService - Unknown version found in /tmp/rust_mozprofile.D297RGMat07w/containers.json
+1539995675757	Marionette	INFO	Listening on port 41775
+1539995675824	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Parent][DispatchAsyncMessage] Error: PClientSourceOp::Msg___delete__ Route error: message sent to unknown actor ID
+
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+[Parent 21917, Gecko_IOThread] WARNING: pipe error (114): Connection reset by peer: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+[Parent 21917, Gecko_IOThread] WARNING: pipe error (99): Connection reset by peer: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1539995768830	mozrunner::runner	INFO	Running command: "/usr/local/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.NcN9dBtveRnQ"
+ERROR - ContextualIdentityService - Unknown version found in /tmp/rust_mozprofile.NcN9dBtveRnQ/containers.json
+1539995770124	Marionette	INFO	Listening on port 41561
+1539995770146	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Parent][DispatchAsyncMessage] Error: PClientSourceOp::Msg___delete__ Route error: message sent to unknown actor ID
+
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+1539997132094	mozrunner::runner	INFO	Running command: "/usr/local/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.gHeIzTF0bkeM"
+ERROR - ContextualIdentityService - Unknown version found in /tmp/rust_mozprofile.gHeIzTF0bkeM/containers.json
+1539997133371	Marionette	INFO	Listening on port 39749
+1539997133401	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Parent][DispatchAsyncMessage] Error: PClientSourceOp::Msg___delete__ Route error: message sent to unknown actor ID
+
+1539997146350	mozrunner::runner	INFO	Running command: "/usr/local/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.sk9KGijAR89C"
+ERROR - ContextualIdentityService - Unknown version found in /tmp/rust_mozprofile.sk9KGijAR89C/containers.json
+1539997147605	Marionette	INFO	Listening on port 40399
+1539997147655	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Parent][DispatchAsyncMessage] Error: PClientSourceOp::Msg___delete__ Route error: message sent to unknown actor ID
+
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+1539997343327	mozrunner::runner	INFO	Running command: "/usr/local/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.CcEztBbDN2v1"
+ERROR - ContextualIdentityService - Unknown version found in /tmp/rust_mozprofile.CcEztBbDN2v1/containers.json
+1539997344502	Marionette	INFO	Listening on port 46187
+1539997344533	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Parent][DispatchAsyncMessage] Error: PClientSourceOp::Msg___delete__ Route error: message sent to unknown actor ID
+
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1539997399162	mozrunner::runner	INFO	Running command: "/usr/local/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.YfNnAeNsPaAT"
+ERROR - ContextualIdentityService - Unknown version found in /tmp/rust_mozprofile.YfNnAeNsPaAT/containers.json
+1539997400414	Marionette	INFO	Listening on port 45287
+1539997400466	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Parent][DispatchAsyncMessage] Error: PClientSourceOp::Msg___delete__ Route error: message sent to unknown actor ID
+
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[Child 12263, Chrome_ChildThread] WARNING: pipe error (3): Connection reset by peer: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353
+1540003351793	mozrunner::runner	INFO	Running command: "/usr/local/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.5av8hiNDgYHN"
+ERROR - ContextualIdentityService - Unknown version found in /tmp/rust_mozprofile.5av8hiNDgYHN/containers.json
+1540003353017	Marionette	INFO	Listening on port 39083
+1540003353099	Marionette	WARN	TLS certificate errors will be ignored for this session
+
+###!!! [Parent][DispatchAsyncMessage] Error: PClientSourceOp::Msg___delete__ Route error: message sent to unknown actor ID
+
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+JavaScript error: resource://gre/modules/ExtensionParent.jsm, line 1009: Error: WebExtension context not found!
+[Parent 12509, Gecko_IOThread] WARNING: pipe error (54): Connection reset by peer: file /builds/worker/workspace/build/src/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 353

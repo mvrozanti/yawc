@@ -56,42 +56,25 @@ def main(args):
     def log_json(d): 
         global LOG
         print(json.dumps(d, indent=4), file=LOG)
-    if args.chats: log_json({'chats' : [c.name for c in DRIVER.get_all_chats()]})
-    elif args.my_contacts: log_json({'my_contacts': [c.name for c in DRIVER.get_my_contacts()]})
-    elif args.contacts: log_json({'all_contacts': [c.name for c in DRIVER.get_contacts()]})
-    elif args.send:
-        if not args.to:
-            contact_type = None
-            if args.log: print('Cannot use -s with -l without -t', file=LOG) and exit_gracefully()
-            while not contact_type:
-                try: contact_type = int(input('\t1) Contact\n\t2) Recent chat\nSend to: '))
-                except: pass
-            if contact_type == 1: 
-                contacts = DRIVER.get_contacts()
-                prompt = ''
-                code.interact(local=locals())
-                prompt += '\n'.join([str(i) + ') ' + c.name + ': ' + c.id for i, c in enumerate(contacts) if c.name])
-                prompt += '\nSelect contact: '
-                chosen = None
-                while not chosen:
-                    try: chosen = int(input(prompt))
-                    except: pass
-                args.to = contacts[chosen].id
-            elif contact_type == 2: pass
-        DRIVER.send_message_to_id(args.to, args.send)
+    code.interact(local=globals())
+    if args.chats: log_json({'chats' : [[c.name, c.id] for c in DRIVER.get_all_chats() if c.name]})
+    elif args.my_contacts: log_json({'my_contacts': [[c.name, c.id] for c in DRIVER.get_my_contacts()]})
+    elif args.contacts: log_json({'all_contacts': [[c.name, c.id] for c in DRIVER.get_contacts()]})
+    elif args.send: DRIVER.send_message_to_id(args.to, args.send)
 
 if __name__ == '__main__': 
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-c', '--chats',                action='store_true',        help='show chats')
-    parser.add_argument('-C', '--contacts',             action='store_true',        help='show all contacts ever seen by this account')
-    parser.add_argument('-v', '--verbose',              action='store_true',        help='verbose logging')
-    parser.add_argument('-m', '--my-contacts',          action='store_true',        help='show my contacts (added to address book)')
-    parser.add_argument('-s', '--send',                 metavar='MESSAGE',          help='send message (requires --to flag)')
-    parser.add_argument('-B', '--broadcast',            metavar='MESSAGE',          help='send message to all chats')
-    parser.add_argument('-b', '--broadcast-contacts',   metavar='MESSAGE',          help='send message to all contacts')
-    parser.add_argument('-p', '--profile',              metavar='LOCATION',         help='use firefox profile contained in LOCATION (defaults to ~/.mozilla/firefox/*.default)')
-    parser.add_argument('-l', '--log',                  metavar='LOCATION',         help='log to LOCATION')
-    parser.add_argument('-t', '--to',                   metavar='[CONTACT|CHAT]',   help='apply command only to this CONTACT or CHAT')
+    parser = argparse.ArgumentParser(prog='yawc', description='Interface for WebWhatsapp-Wrapper API')
+    actions = parser.add_mutually_exclusive_group()
+    actions.add_argument('-c', '--chats',                action='store_true',        help='show chats')
+    actions.add_argument('-C', '--contacts',             action='store_true',        help='show all contacts ever seen by this account')
+    actions.add_argument('-m', '--my-contacts',          action='store_true',        help='show my contacts (added to address book)')
+    actions.add_argument('-s', '--send',                 metavar='MESSAGE',          help='send message (requires --to flag)')
+    actions.add_argument('-B', '--broadcast',            metavar='MESSAGE',          help='send message to all chats')
+    actions.add_argument('-b', '--broadcast-contacts',   metavar='MESSAGE',          help='send message to all contacts')
+    parser.add_argument( '-t', '--to',                   metavar='[CONTACT|CHAT]',   help='apply command to this CONTACT or CHAT', required='-s' in sys.argv or '--send' in sys.argv)
+    parser.add_argument( '-v', '--verbose',              action='store_true',        help='verbose logging')
+    parser.add_argument( '-p', '--profile',              metavar='LOCATION',         help='use firefox profile contained in LOCATION (defaults to ~/.mozilla/firefox/*.default)')
+    parser.add_argument( '-l', '--log',                  metavar='LOCATION',         help='log to LOCATION')
     args = parser.parse_args()
     main(args)
 #     completer = MyCompleter([])
