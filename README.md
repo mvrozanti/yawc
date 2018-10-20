@@ -8,7 +8,7 @@
 
 ## Requirements
 
-- Firefox version 61.0
+- [Firefox version 61.0](https://download-installer.cdn.mozilla.net/pub/firefox/releases/61.0.2/linux-x86_64/en-US/firefox-61.0.2.tar.bz2)
 
 - Python 3
 
@@ -34,15 +34,15 @@ git clone --recursive https://github.com/mvrozanti/yawc \
 ## Usage
 
 ```
-usage: whatsapp.py [-h] [-c] [-C] [-v] [-m] [-s MESSAGE] [-B MESSAGE]
-                   [-b MESSAGE] [-p LOCATION] [-l LOCATION]
-                   [-t [CONTACT|CHAT]]
+usage: yawc [-h] [-c | -C | -m | -s MESSAGE | -B MESSAGE | -b MESSAGE]
+            [-t [CONTACT|CHAT]] [-v] [-p LOCATION] [-l LOCATION]
+
+Interface for WebWhatsapp-Wrapper API
 
 optional arguments:
   -h, --help            show this help message and exit
   -c, --chats           show chats
   -C, --contacts        show all contacts ever seen by this account
-  -v, --verbose         verbose logging
   -m, --my-contacts     show my contacts (added to address book)
   -s MESSAGE, --send MESSAGE
                         send message (requires --to flag)
@@ -50,12 +50,14 @@ optional arguments:
                         send message to all chats
   -b MESSAGE, --broadcast-contacts MESSAGE
                         send message to all contacts
+  -t [CONTACT|CHAT], --to [CONTACT|CHAT]
+                        apply command to this CONTACT or CHAT
+  -v, --verbose         verbose logging
   -p LOCATION, --profile LOCATION
-                        use firefox profile contained in LOCATION
+                        use firefox profile contained in LOCATION (defaults to
+                        ~/.mozilla/firefox/*.default)
   -l LOCATION, --log LOCATION
                         log to LOCATION
-  -t [CONTACT|CHAT], --to [CONTACT|CHAT]
-                        apply command only to this CONTACT or CHAT
 ```
 
 ## TODO
