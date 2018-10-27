@@ -60,6 +60,7 @@ def main(args):
     elif args.my_contacts: log_json({'my_contacts': [[c.name, c.id] for c in DRIVER.get_my_contacts()]})
     elif args.contacts: log_json({'all_contacts': [[c.name, c.id] for c in DRIVER.get_contacts()]})
     elif args.send: DRIVER.send_message_to_id(args.to, ''.join(sys.stdin.readlines()) if args.send == '-' else args.send)
+    elif args.events: print('to be implemented')
 
 if __name__ == '__main__': 
     parser = argparse.ArgumentParser(prog='yawc', description='Interface for WebWhatsapp-Wrapper API')
@@ -70,6 +71,7 @@ if __name__ == '__main__':
     actions.add_argument('-s', '--send',                 metavar='MESSAGE',          help='send message. If MESSAGE equals \'-\', read from stdin. Requires --to flag')
     actions.add_argument('-B', '--broadcast',            metavar='MESSAGE',          help='send message to all chats')
     actions.add_argument('-b', '--broadcast-contacts',   metavar='MESSAGE',          help='send message to all contacts')
+    actions.add_argument('-e', '--events',               metavar='DURATION',         help='watch events (default duration=30)', nargs='?', default=30)
     parser.add_argument( '-t', '--to',                   metavar='[CONTACT|CHAT]',   help='apply command to this CONTACT or CHAT', required='-s' in sys.argv or '--send' in sys.argv)
     parser.add_argument( '-v', '--verbose',              action='store_true',        help='verbose logging')
     parser.add_argument( '-p', '--profile',              metavar='LOCATION',         help='use firefox profile contained in LOCATION (defaults to ~/.mozilla/firefox/*.default)')

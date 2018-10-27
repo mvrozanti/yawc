@@ -17,7 +17,7 @@
 
 ## Installation
 
-- This project uses [WhatsApp-Wrapper](https://github.com/mukulhase/WebWhatsapp-Wrapper) API so it needs to be cloned *recursively*:
+- This project uses [WebWhatsApp-Wrapper](https://github.com/mukulhase/WebWhatsapp-Wrapper) API so it needs to be cloned *recursively*:
 
 ```
 git clone --recursive https://github.com/mvrozanti/yawc \
@@ -34,7 +34,8 @@ git clone --recursive https://github.com/mvrozanti/yawc \
 ## Usage
 
 ```
-usage: yawc [-h] (-c | -C | -m | -s MESSAGE | -B MESSAGE | -b MESSAGE)
+usage: yawc [-h]
+            (-c | -C | -m | -s MESSAGE | -B MESSAGE | -b MESSAGE | -e [DURATION])
             [-t [CONTACT|CHAT]] [-v] [-p LOCATION] [-l LOCATION]
 
 Interface for WebWhatsapp-Wrapper API
@@ -51,6 +52,8 @@ optional arguments:
                         send message to all chats
   -b MESSAGE, --broadcast-contacts MESSAGE
                         send message to all contacts
+  -e [DURATION], --events [DURATION]
+                        watch events (default duration=30)
   -t [CONTACT|CHAT], --to [CONTACT|CHAT]
                         apply command to this CONTACT or CHAT
   -v, --verbose         verbose logging
@@ -68,3 +71,4 @@ optional arguments:
 - Send/Download images
 - Read messages continously in an optionally set format
 - Add user to group
+- Implement event logging (online logs, typing status and more)
