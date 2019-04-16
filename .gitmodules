@@ -1,0 +1,3 @@
+[submodule "WebWhatsapp"]
+	path = WebWhatsapp
+	url = https://github.com/mukulhase/WebWhatsapp-Wrapper

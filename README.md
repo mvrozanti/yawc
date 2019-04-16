@@ -21,11 +21,10 @@
 
 ```
 git clone --recursive https://github.com/mvrozanti/yawc \
-  cd yawc/WebWhatsapp-Wrapper \
+  cd yawc/WebWhatsapp \
   pip3 install --user -r requirements.txt \
-  pip3 install --user . \
   cd .. \
-  !-3
+  !-2
 ```
 
 - Make sure you have geckodriver and Firefox 61 installed:
@@ -36,7 +35,7 @@ git clone --recursive https://github.com/mvrozanti/yawc \
 ```
 usage: yawc [-h]
             (-c | -C | -m | -s MESSAGE | -B MESSAGE | -b MESSAGE | -e [DURATION])
-            [-t [CONTACT|CHAT]] [-v] [-p LOCATION] [-l LOCATION]
+            [-t [CONTACT|CHAT]] -D PATH [-v] [-p LOCATION] [-l LOCATION]
 
 Interface for WebWhatsapp-Wrapper API
 
@@ -56,6 +55,8 @@ optional arguments:
                         watch events (default duration=30)
   -t [CONTACT|CHAT], --to [CONTACT|CHAT]
                         apply command to this CONTACT or CHAT
+  -D PATH, --save-directory PATH
+                        specify directory where to safe multimedia
   -v, --verbose         verbose logging
   -p LOCATION, --profile LOCATION
                         use firefox profile contained in LOCATION (defaults to
@@ -66,9 +67,9 @@ optional arguments:
 
 ## TODO
 
-- Support unicode
-- Send message --to [exact name of contact instead of just c.id]
-- Send/Download images
-- Read messages continously in an optionally set format
-- Add user to group
-- Implement event logging (online logs, typing status and more)
+- [ ] Support unicode
+- [ ] Send message --to [exact name of contact instead of just c.id]
+- [ ] Send/Download images
+- [ ] Read messages continously in an optionally set format
+- [ ] Add user to group
+- [ ] Implement event logging (online logs, typing status and more)
