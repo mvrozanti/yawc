@@ -72,4 +72,5 @@ optional arguments:
 - [ ] Send/Download images
 - [ ] Read messages continously in an optionally set format
 - [ ] Add user to group
+- [ ] Frequency reports
 - [ ] Implement event logging (online logs, typing status and more)

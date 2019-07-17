@@ -9,8 +9,6 @@ import glob
 import os.path as op
 import atexit
 import psutil
-import appdirs
-import shelve
 
 LOG = sys.stdout
 DATABASE = None
@@ -49,7 +47,6 @@ def main(args):
         sys.exit(1)
     DEBUG and print('Starting driver with profile at %s' % args.profile, file=LOG)
     DRIVER = WhatsAPIDriver(profile=args.profile,headless=not args.render)
-    DATABASE = shelve.open(appdirs.user_cache_dir('yawc.shelve'))
     atexit.register(exit_gracefully)
     DEBUG and print('Profile loaded. Waiting for login...', file=LOG)
     DRIVER.wait_for_login()
@@ -57,20 +54,18 @@ def main(args):
     def log_json(d): 
         global LOG
         print(json.dumps(d, indent=4), file=LOG)
+
+    if args.interactive:
+        code.interact(local=globals().update(locals()) or globals())
+
     if args.chats: 
         chats = DRIVER.get_all_chats()
-        # if 'chats' not in DATABASE or args.fetch:
-            # DATABASE.update({'chats': chats})
         log_json({'chats' : [[c.name, c.id] for c in chats if c.name]})
     elif args.my_contacts: 
         my_contacts = DRIVER.get_my_contacts()
-        # if 'my_contacts' not in DATABASE or args.fetch:
-        #     DATABASE.update({'my_contacts': my_contacts})
         log_json({'my_contacts': [[c.name, c.id] for c in my_contacts]})
     elif args.contacts: 
         contacts = DRIVER.get_contacts()
-        # if 'contacts' not in DATABASE or args.fetch:
-        #     DATABASE['contacts'] = contacts
         log_json({'all_contacts': [[c.name, c.id] for c in contacts]})
     elif args.send: 
         if args.multimedia: pass # read multimedia file argument
@@ -100,13 +95,14 @@ if __name__ == '__main__':
     actions.add_argument('-B', '--broadcast',            metavar='MESSAGE',          help='send message to all chats')
     actions.add_argument('-b', '--broadcast-contacts',   metavar='MESSAGE',          help='send message to all contacts')
     actions.add_argument('-e', '--events',               metavar='DURATION',         help='watch events (default duration=Infinity)', nargs='?', default=-1)
-    parser.add_argument( '-M',  '--multimedia',          metavar='LOCATION',         help='attach multimedia file when using --send')
-    parser.add_argument( '-R',  '--render',              action='store_true',        help='render browser', default=False)
+    parser.add_argument( '-M', '--multimedia',           metavar='LOCATION',         help='attach multimedia file when using --send')
+    parser.add_argument( '-R', '--render',               action='store_true',        help='render browser', default=False)
     parser.add_argument( '-t', '--target',               metavar='[CONTACT|CHAT]',   help='apply command to target CONTACT or CHAT', required='-s' in sys.argv or '--send' in sys.argv)
     parser.add_argument( '-D', '--save-directory',       metavar='PATH',             help='specify directory where to safe multimedia', default='.')
     parser.add_argument( '-f', '--fetch',                action='store_true',        help='get internal database up to date', default=False)
     parser.add_argument( '-v', '--verbose',              action='store_true',        help='verbose logging')
     parser.add_argument( '-p', '--profile',              metavar='LOCATION',         help='use firefox profile contained in LOCATION (defaults to ~/.mozilla/firefox/*.default)')
     parser.add_argument( '-l', '--log',                  metavar='LOCATION',         help='log to LOCATION')
+    parser.add_argument( '-i', '--interactive',          action='store_true',        help='run in interactive mode')
     args = parser.parse_args()
     main(args)
