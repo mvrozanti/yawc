@@ -47,6 +47,7 @@ def main(args):
         sys.exit(1)
     DEBUG and print('Starting driver with profile at %s' % args.profile, file=LOG)
     DRIVER = WhatsAPIDriver(profile=args.profile,headless=not args.render)
+    DATABASE = shelve.open(appdirs.user_cache_dir('yawc.shelve'))
     atexit.register(exit_gracefully)
     DEBUG and print('Profile loaded. Waiting for login...', file=LOG)
     DRIVER.wait_for_login()
@@ -60,12 +61,18 @@ def main(args):
 
     if args.chats: 
         chats = DRIVER.get_all_chats()
+        if 'chats' not in DATABASE or args.fetch:
+            DATABASE.update({'chats': chats})
         log_json({'chats' : [[c.name, c.id] for c in chats if c.name]})
     elif args.my_contacts: 
         my_contacts = DRIVER.get_my_contacts()
+        if 'my_contacts' not in DATABASE or args.fetch:
+            DATABASE.update({'my_contacts': my_contacts})
         log_json({'my_contacts': [[c.name, c.id] for c in my_contacts]})
     elif args.contacts: 
         contacts = DRIVER.get_contacts()
+        if 'contacts' not in DATABASE or args.fetch:
+            DATABASE['contacts'] = contacts
         log_json({'all_contacts': [[c.name, c.id] for c in contacts]})
     elif args.send: 
         if args.multimedia: pass # read multimedia file argument
