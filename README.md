@@ -34,8 +34,9 @@ git clone --recursive https://github.com/mvrozanti/yawc \
 
 ```
 usage: yawc [-h]
-            (-c | -C | -m | -s MESSAGE | -B MESSAGE | -b MESSAGE | -e [DURATION])
-            [-t [CONTACT|CHAT]] -D PATH [-v] [-p LOCATION] [-l LOCATION]
+            (-c | -C | -m | -s MESSAGE | -S | -B MESSAGE | -b MESSAGE | -e [DURATION] | -i)
+            [-M LOCATION] [-R] [-t [CONTACT|CHAT]] [-D PATH] [-f] [-v]
+            [-p LOCATION] [-l LOCATION]
 
 Interface for WebWhatsapp-Wrapper API
 
@@ -45,18 +46,24 @@ optional arguments:
   -C, --contacts        show all contacts ever seen by this account
   -m, --my-contacts     show my contacts (added to address book)
   -s MESSAGE, --send MESSAGE
-                        send message. If MESSAGE equals '-', read from stdin.
-                        Requires --to flag
+                        send message. If MESSAGE is '-', read from stdin.
+                        Requires --target flag
+  -S, --show            show chat log for contact. Requires --target flag
   -B MESSAGE, --broadcast MESSAGE
                         send message to all chats
   -b MESSAGE, --broadcast-contacts MESSAGE
                         send message to all contacts
   -e [DURATION], --events [DURATION]
-                        watch events (default duration=30)
-  -t [CONTACT|CHAT], --to [CONTACT|CHAT]
-                        apply command to this CONTACT or CHAT
+                        watch events (default duration=Infinity)
+  -i, --interactive     run in interactive mode
+  -M LOCATION, --multimedia LOCATION
+                        attach multimedia file when using --send
+  -R, --render          render browser
+  -t [CONTACT|CHAT], --target [CONTACT|CHAT]
+                        apply command to target CONTACT or CHAT
   -D PATH, --save-directory PATH
                         specify directory where to safe multimedia
+  -f, --fetch           get internal database up to date
   -v, --verbose         verbose logging
   -p LOCATION, --profile LOCATION
                         use firefox profile contained in LOCATION (defaults to
